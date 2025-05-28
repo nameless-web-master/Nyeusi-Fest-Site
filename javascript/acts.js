@@ -53,8 +53,8 @@ const actsContent = [
   },
 ];
 
-document.getElementById('actContainer').innerHTML = actsContent.map((act, index) => `
-        <article class="${index >= 2 ? 'act-card collapse test' : 'act-card'}">
+document.getElementById('actContainer').innerHTML = actsContent.map((act, index) => (
+  `<article class="${index >= 2 ? 'act-card collapse test' : 'act-card'}">
           <div class="card-images">
             <img class="card-image1" src="${act.image}" alt="Black Tea" />
             <img class="card-image2" src="${act.icon}" alt="Music" />
@@ -68,7 +68,7 @@ document.getElementById('actContainer').innerHTML = actsContent.map((act, index)
             </p>
           </div>
         </article>
-`).join('');
+`)).join('');
 
 const collapseButton = document.getElementById('collapse');
 const articles = document.querySelectorAll('.test');
